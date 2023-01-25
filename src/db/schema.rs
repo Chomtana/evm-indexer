@@ -90,7 +90,7 @@ diesel::table! {
         from_address -> Text,
         to_address -> Text,
         value -> Text,
-        erc20_tokens_parced -> Nullable<Bool>,
+        erc20_tokens_parsed -> Nullable<Bool>,
     }
 }
 

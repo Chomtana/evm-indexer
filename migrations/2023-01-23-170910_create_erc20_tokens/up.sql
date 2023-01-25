@@ -13,4 +13,4 @@ ON evm_erc20_tokens (address);
 CREATE INDEX IF NOT EXISTS evm_erc20_tokens_by_chain
 ON evm_erc20_tokens (chain);
 
-ALTER TABLE evm_erc20_transfers ADD COLUMN erc20_tokens_parced BOOL;
+ALTER TABLE evm_erc20_transfers ADD COLUMN erc20_tokens_parsed BOOL;
