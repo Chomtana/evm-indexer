@@ -1,0 +1,1 @@
+DROP TABLE evm_nft_transfers;

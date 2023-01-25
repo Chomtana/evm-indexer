@@ -95,6 +95,32 @@ diesel::table! {
 }
 
 diesel::table! {
+    evm_nft_tokens (address, chain) {
+        address -> Text,
+        chain -> Text,
+        token_type -> Text,
+        name -> Nullable<Text>,
+        symbol -> Nullable<Text>,
+        contract_uri -> Nullable<Text>,
+    }
+}
+
+diesel::table! {
+    evm_nft_transfers (hash, log_index) {
+        hash -> Text,
+        log_index -> Int8,
+        transfer_index -> Int8,
+        event_type -> Text,
+        token -> Text,
+        from_address -> Text,
+        to_address -> Text,
+        token_id -> Text,
+        value -> Text,
+        nft_tokens_parsed -> Nullable<Bool>,
+    }
+}
+
+diesel::table! {
     evm_methods (method) {
         method -> Text,
         name -> Text,
